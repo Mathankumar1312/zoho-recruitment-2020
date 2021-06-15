@@ -1,0 +1,25 @@
+
+def sort_odd_count(inp):
+    try:
+        length = len(inp)
+        mid_pt = 0
+        n = 0
+        while n == 0:
+            if length % 2  == 0:
+                mid_pt = length // 2
+                n += 1
+            else:
+                length -=1
+        if mid_pt:
+            rvse_str =  inp[mid_pt:] + inp[:mid_pt]
+
+            for i in range(len(rvse_str)):
+                print(length -i, rvse_str[i+1])
+                
+    except Exception as err:
+        pass
+
+
+if __name__=='__main__':
+    str_data = str(input())
+    sort_odd_count(str_data)
